@@ -1,0 +1,29 @@
+!!!
+%html
+%head
+%title Служба охорони Кобра
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+= javascript_include_tag 'application', 'data-turbolinks-track' => true
+= csrf_meta_tags
+%body
+.navbar-brand{class: "main-nav"}
+  .col-lg-5
+    %ul{class: "nav navbar-nav navigat"}
+      %li= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
+      %li= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
+      %li= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
+      %li= link_to 'Клієнти', articles_path, class: "btn btn-link btn-md"
+      %li= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
+      %li= link_to 'Філіали', services_path, class: "btn btn-link btn-md"
+  .col-lg-2
+    .img-circle
+      = link_to image_tag('http://www.kobra.ks.ua/image/kobra.gif',  width: '90px', height: '110px'), root_path, class: 'btn btn-link btn-logo'
+  .col-lg-5
+    %ul{class: "nav navbar-nav navigat"}
+      %li= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
+      %li= link_to 'Наші партнери', services_path, class: "btn btn-link btn-md"
+      %li= link_to 'Контакти', articles_path, class: "btn btn-link btn-md"
+
+.container-fluid{class: "content-area"}
+  = yield
+.container-fluid{class: "main-footer"}

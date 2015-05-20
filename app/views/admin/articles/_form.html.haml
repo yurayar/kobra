@@ -1,0 +1,16 @@
+= simple_form_for(@article) do |f|
+  .form-inputs
+    = f.label :title
+    = f.text_field :title
+    = f.label :content
+    = f.text_area :content
+    = f.label :category_id
+    = f.association :category
+    = f.label :author_id
+    = f.number_field :author_id
+    = f.label :comments_id
+    = f.number_field :comments_id
+    = f.label :thumbnail
+    = f.text_field :thumbnail
+  .form-actions
+    = f.submit

@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+@import "bootstrap-sprockets";
+.main-nav{
+  position: fixed;
+  height: 54px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px !important;
+  overflow: visible;
+  box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
+}
+.homepage{
+  height: auto;
+  padding: 0px;
+  background-color: white;
+}
+.home-slider{
+  height: 80vh;
+  background-image: url("http://www.idesignarch.com/wp-content/uploads/House-In-Monasterios_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-footer{
+  height: 10vh;
+  background-color: #0cab76;
+}
+.services{
+  padding: 30px;
+  height: 800px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.table-menu{
+  width: 30%;
+}
+.table-menu td {
+  color: white;
+  padding: 5px;
+  width: 10%;
+}
+.table-menu td:hover{
+  border-bottom: 2px solid green;
+}
+.navigat li:hover{
+  border-bottom: 4px solid #09ab70;
+  margin-bottom: 0px;
+}
+.navigat li{
+  margin-bottom: 4px;
+}
+.navigat{
+  height: 46px;
+}
+.content-area{
+  min-height: 100vh;
+  height: auto;
+  padding-top: 54px;
+  padding-left:  0px;
+  padding-right: 0px;
+}
+.slogan{
+  height: 100%;
+  padding: 5px;
+  text-align: center;
+}
+.btn-logo{
+  margin-right: 30px;
+  margin-left: 30px;
+}

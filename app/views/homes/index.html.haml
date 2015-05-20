@@ -1,0 +1,6 @@
+.container-fluid{class: "homepage"}
+  .container-fluid{class: 'home-slider'}
+  .container-fluid{class: 'services'}
+    - @services.last(6).each do |s|
+      .service
+        = s.name
