@@ -27,7 +27,7 @@ class Admin::ServicesController < Admin::BaseController
     @service = Service.new(service_params)
 
     if @service.save
-      redirect_to root_path
+      redirect_to admin_services_path
     else
       render 'new'
     end

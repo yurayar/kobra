@@ -1,6 +1,11 @@
 .container-fluid{class: "homepage"}
   .container-fluid{class: 'home-slider'}
   .container-fluid{class: 'services'}
+    .page-header{class: "service-block"}
+      %h2 Наші Послуги
     - @services.last(6).each do |s|
       .service
         = s.name
+    .page-header{class: "clients-block"}
+      %h2 Наші Клієнти
+      

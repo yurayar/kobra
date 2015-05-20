@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 250 ) {
+            $(".btn-logo").fadeOut(1000);
+        }
+        else if ($(this).scrollTop() < 250 ) {
+            $(".btn-logo").fadeIn(1000);
+        }
+    });
+});
