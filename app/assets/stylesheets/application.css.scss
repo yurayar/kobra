@@ -17,7 +17,8 @@
 @import "bootstrap-sprockets";
 .main-nav{
   position: fixed;
-  height: 54px;
+  min-height: 10%;
+  max-height: 15%;
   width: 100%;
   background-color: #ffffff;
   padding: 0px !important;
@@ -31,43 +32,37 @@
 }
 .home-slider{
   height: 80vh;
-  background-image: url("http://www.idesignarch.com/wp-content/uploads/House-In-Monasterios_1.jpg");
+  background-image: url("http://www.collection.remax.ca/uploadedImages/Remaxca/Content/Collection/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .main-footer{
-  height: 10vh;
-  background-color: #0cab76;
+  height: 70px;
+  padding-top: 20px;
+  background-color: white;
+  border-top: 3px solid #0aab5c;
+  box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
 }
 .services{
   padding: 0px 30px 30px 30px;
   min-height: 800px;
   height: auto;
 }
-.logo {
-  width: 50px;
-  height: 50px;
+.nav-items{
+  height: 100%;
 }
-.table-menu{
-  width: 30%;
+.nav-items:hover{
+  padding-bottom: 0px;
 }
-.table-menu td {
-  color: white;
-  padding: 5px;
-  width: 10%;
+.nav-items td{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid white;
 }
-.table-menu td:hover{
-  border-bottom: 2px solid green;
-}
-.navigat li:hover{
-  border-bottom: 4px solid #09ab70;
+.nav-items td:hover{
+  background-color: #f1f1f1;
   margin-bottom: 0px;
-}
-.navigat li{
-  margin-bottom: 4px;
-}
-.navigat{
-  height: 46px;
+  border-bottom: 4px solid #0aab5c;
 }
 .content-area{
   min-height: 100vh;
@@ -81,7 +76,10 @@
   padding: 5px;
   text-align: center;
 }
-.btn-logo{
-  margin-right: 30px;
-  margin-left: 30px;
+.logot{
+  width: 50%;
+  margin-left: 20%;
+}
+.first-nav{
+  height: 10vh;
 }

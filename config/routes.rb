@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :partners
   resources :clients
   devise_for :admin
   devise_for :authors
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :articles
     resources :services
+    resources :clients
     root 'homes#index'
   end
   namespace :author do
