@@ -5,7 +5,11 @@
       %h2 Наші Послуги
     - @services.last(6).each do |s|
       .service
-        = s.name
+        .panel-heading
+          = link_to s.name, s, {class: "btn btn-link btn-md"}
+        .panel-body{class: "service-photo"}
+          = image_tag s.photo, width: '100%', height: '300px'
+        .panel-body
     .page-header{class: "clients-block"}
       %h2 Наші Клієнти
     - @clients.last(4).each do |c|

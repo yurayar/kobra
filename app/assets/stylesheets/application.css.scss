@@ -17,8 +17,9 @@
 @import "bootstrap-sprockets";
 .main-nav{
   position: fixed;
-  min-height: 10%;
-  max-height: 15%;
+  min-height: 80px;
+  height: auto;
+  max-height: 10%;
   width: 100%;
   background-color: #ffffff;
   padding: 0px !important;

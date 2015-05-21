@@ -7,7 +7,7 @@
 = csrf_meta_tags
 %body
 .navbar-brand{class: "main-nav"}
-  .container-fluid
+  .container-fluid{class: "mainnav-wrapper"}
     .col-lg-2{class: "f-nav"}
       .logot
         = link_to image_tag('http://s017.radikal.ru/i432/1505/ac/09edd9e18a5f.png',  width: '100%', height: '100%'), root_path, class: 'btn btn-link btn-logo'
@@ -20,11 +20,16 @@
           %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
           %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
           %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
+          %td= link_to 'Контакти', articles_path, class: "btn btn-link btn-md"
     .col-lg-2{class: "first-nav"}
       %table{class: 'nav-items'}
         %tr
-          %td= link_to 'Контакти', articles_path, class: "btn btn-link btn-md"
-          %td= image_tag('http://ziua.prodrama.ro/custom-resources/images/fb.png', width: '20px', height: '20px')
+          %td
+            .img-circle
+              = link_to image_tag('http://ziua.prodrama.ro/custom-resources/images/fb.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
+          %td
+            .img-circle
+              = link_to image_tag('http://master-igor.com/static/images/vk.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
 .container-fluid{class: "content-area"}
   = yield
 .container-fluid{class: "main-footer"}
