@@ -1,9 +1,10 @@
-class CategoriesController < ApplicationController
+class Admin::CategoriesController < Admin::BaseController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
   def index
     @categories = Category.all
+    @services = Service.all
   end
 
   # GET /categories/1

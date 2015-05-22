@@ -23,4 +23,10 @@ $(document).ready(function() {
             $(".main-nav").css("opacity", "1.0");
         }
     });
+    $(".service").mouseenter(function(){
+        $(this).css("color", "red");
+    });
+    $(".service").mouseleave(function(){
+        $(this).css("background-color", "white");
+    });
 });

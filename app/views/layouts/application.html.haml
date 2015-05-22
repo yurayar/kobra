@@ -6,7 +6,7 @@
 = javascript_include_tag 'application', 'data-turbolinks-track' => true
 = csrf_meta_tags
 %body
-.navbar-brand{class: "main-nav"}
+.navbar-brand{class: "main-nav navbar navbar-fixed-top"}
   .container-fluid{class: "mainnav-wrapper"}
     .col-lg-2{class: "f-nav"}
       .logot
@@ -33,4 +33,45 @@
 .container-fluid{class: "content-area"}
   = yield
 .container-fluid{class: "main-footer"}
-  %p Copyright © 2015. Cлужба охраны "КОБРА"
+  .col-lg-2{class: "menu-column"}
+    .page-header
+      %p Розділи
+    .container-fluid
+      %table{class: "categories-home"}
+        %tr
+          %td= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
+        %tr
+          %td= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
+        %tr
+          %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
+        %tr
+          %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
+        %tr
+          %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
+        %tr
+          %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
+        %tr
+          %td= link_to 'Вакансії', articles_path, class: "btn btn-link btn-md"
+  .col-lg-2
+    .page-header
+      %p Херсон
+    .container-fluid
+      %table{class: "services-kh"}
+        - @services.limit(7).each do |ls|
+          %tr
+            %td= link_to ls.name, ls, class: "btn btn-link btn-md"
+  .col-lg-3
+    .page-header
+      %p Контакти
+  .col-lg-4
+    .page-header
+      %p Залиште запит
+    .input-group{class: "homepage-contact"}
+      .panel-body
+        %input{class: "form-control", placeholder: "Ваш e-mail"}
+      .panel-body
+        %input{class: "form-control", placeholder: "Тема"}
+      .panel-body
+        = link_to "Надіслати", articles_path, class: "btn btn-danger"
+.container-fluid{class: "footer-info"}
+  %p Copyright © 2006-2015. Cлужба охраны "КОБРА"

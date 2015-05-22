@@ -4,6 +4,7 @@ class ClientsController < ApplicationController
   # GET /clients
   def index
     @clients = Client.all
+    @services = Service.all
   end
 
   # GET /clients/1

@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   def index
     @categories = Category.all
+    @services = Service.all
   end
 
   # GET /categories/1

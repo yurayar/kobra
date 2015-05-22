@@ -1,8 +1,6 @@
 $(document).ready(function() {
-    $('.main-nav').hide();
     $('.home-slider').hide();
     $(".logot").hide();
-    $('.main-nav').fadeIn(2000);
     $(".logot").fadeIn(3000);
     $(".home-slider").fadeIn(700);
     $(window).scroll(function(){
