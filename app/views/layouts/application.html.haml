@@ -57,9 +57,11 @@
       %p Херсон
     .container-fluid
       %table{class: "services-kh"}
-        - @services.limit(7).each do |ls|
-          %tr
-            %td= link_to ls.name, ls, class: "btn btn-link btn-md"
+        - if @services.nil?
+        - else
+          - @services.limit(7).each do |ls|
+            %tr
+              %td= link_to ls.name, ls, class: "btn btn-link btn-md"
   .col-lg-3
     .page-header
       %p Контакти
