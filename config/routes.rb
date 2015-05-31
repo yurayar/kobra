@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :articles
     resources :services
     resources :clients
+    resources :partners
     root 'homes#index'
   end
   namespace :author do

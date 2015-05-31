@@ -38,7 +38,7 @@ class Admin::ServicesController < Admin::BaseController
   def update
     respond_to do |format|
       if @service.update(service_params)
-        format.html { redirect_to @service, notice: 'Service was successfully updated.' }
+        format.html { redirect_to admin_services_path, notice: 'Service was successfully updated.' }
         format.json { render :show, status: :ok, location: @service }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class Admin::ServicesController < Admin::BaseController
   def destroy
     @service.destroy
     respond_to do |format|
-      format.html { redirect_to services_url, notice: 'Service was successfully destroyed.' }
+      format.html { redirect_to admin_services_url, notice: 'Service was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

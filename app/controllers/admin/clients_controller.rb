@@ -24,16 +24,16 @@ class Admin::ClientsController < Admin::BaseController
     @client = Client.new(client_params)
 
     if @client.save
-      redirect_to @client, notice: 'Client was successfully created.'
+      redirect_to admin_root_path
     else
-      render :new
+      render 'new'
     end
   end
 
   # PATCH/PUT /clients/1
   def update
     if @client.update(client_params)
-      redirect_to @client, notice: 'Client was successfully updated.'
+      redirect_to admin_clients_path, notice: 'Client was successfully updated.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class Admin::ClientsController < Admin::BaseController
   # DELETE /clients/1
   def destroy
     @client.destroy
-    redirect_to clients_url, notice: 'Client was successfully destroyed.'
+    redirect_to admin_clients_url, notice: 'Client was successfully destroyed.'
   end
 
   private
