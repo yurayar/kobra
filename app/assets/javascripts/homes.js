@@ -4,7 +4,7 @@ function hello() {
 $(document).ready(function(){
     $('.logoslogan').hide();
     $('.helloslogan').hide();
-    if (window.location == 'http://kobrakh.herokuapp.com/') {
+    if (window.location.pathname == BASE_URL) {
         $('body').css("padding-top", "0px");
         $(".main-footer").hide();
         $('.hello').css("display", "block");
