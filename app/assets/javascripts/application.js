@@ -17,7 +17,7 @@
 $(document).ready(function() {
     $(window).scroll(function(){
         if ($(this).scrollTop() > 100){
-            $(".main-nav").css("opacity", "0.9");
+            $(".main-nav").css("opacity", "1.0");
         }
         else if ($(this).scrollTop() < 100){
             $(".main-nav").css("opacity", "1.0");
@@ -28,5 +28,8 @@ $(document).ready(function() {
     });
     $(".service").mouseleave(function(){
         $(this).css("background-color", "white");
+    });
+    $('.btn-logo').onclick(function(){
+        $('.hello').css("display", "none");
     });
 });

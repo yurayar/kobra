@@ -6,74 +6,90 @@
 = javascript_include_tag 'application', 'data-turbolinks-track' => true
 = csrf_meta_tags
 %body
-.navbar-brand{class: "main-nav navbar navbar-fixed-top"}
-  .container-fluid{class: "mainnav-wrapper"}
-    .col-lg-2{class: "f-nav"}
-      .logot
-        = link_to image_tag('http://s017.radikal.ru/i432/1505/ac/09edd9e18a5f.png',  width: '100%', height: '100%'), root_path, class: 'btn btn-link btn-logo'
-    .col-lg-8{class: "first-nav"}
-      %table{class: 'nav-items'}
-        %tr
-          %td= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
-          %td= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
-          %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
-          %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
-          %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
-          %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
-          %td= link_to 'Контакти', articles_path, class: "btn btn-link btn-md"
-    .col-lg-2{class: "first-nav"}
-      %table{class: 'nav-items'}
-        %tr
-          %td
-            .img-circle
-              = link_to image_tag('http://ziua.prodrama.ro/custom-resources/images/fb.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
-          %td
-            .img-circle
-              = link_to image_tag('http://master-igor.com/static/images/vk.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
-.container-fluid{class: "content-area"}
-  = yield
-.container-fluid{class: "main-footer"}
-  .col-lg-2{class: "menu-column"}
-    .page-header
-      %p Розділи
-    .container-fluid
-      %table{class: "categories-home"}
-        %tr
-          %td= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
-        %tr
-          %td= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
-        %tr
-          %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
-        %tr
-          %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
-        %tr
-          %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
-        %tr
-          %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
-        %tr
-          %td= link_to 'Вакансії', articles_path, class: "btn btn-link btn-md"
-  .col-lg-2
-    .page-header
-      %p Херсон
-    .container-fluid
-      %table{class: "services-kh"}
-        - if @services.nil?
-        - else
-          - @services.limit(7).each do |ls|
-            %tr
-              %td= link_to ls.name, ls, class: "btn btn-link btn-md"
-  .col-lg-3
-    .page-header
-      %p Контакти
-  .col-lg-4
-    .page-header
-      %p Залиште запит
-    .input-group{class: "homepage-contact"}
-      .panel-body
-        %input{class: "form-control", placeholder: "Ваш e-mail"}
-      .panel-body
-        %input{class: "form-control", placeholder: "Тема"}
-      .panel-body
-        = link_to "Надіслати", articles_path, class: "btn btn-danger"
-.container-fluid{class: "footer-info"}
-  %p Copyright © 2006-2015. Cлужба охраны "КОБРА"
+  .container-fluid{class: "hello"}
+    .col-lg-4
+    .col-lg-4
+      .container-fluid{class: "logoslogan"}
+        = image_tag "http://res.cloudinary.com/dbyqfamwg/image/upload/v1433869266/Logo_Kobra_Site_zrra6d.png", width: '100%', height: 'auto', class: "logohello"
+    .col-lg-4
+    .col-lg-2
+    .col-lg-8
+      .container-fluid{class: "helloslogan"}
+        %h2 МЫ ДЕЛАЕМ ВАС СИЛЬНЕЕ!
+    .col-lg-2
+  .navbar-brand{class: "main-nav navbar navbar-fixed-top"}
+    .container-fluid{class: "mainnav-wrapper"}
+      .col-lg-2{class: "f-nav col-md-2 col-sm-2"}
+        .logot
+          = link_to image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1433869266/Logo_Kobra_Site_zrra6d.png',  width: '100%', height: '100%'), root_path, class: 'btn btn-link btn-logo'
+      .col-lg-8{class: "first-nav col-md-8 col-sm-8"}
+        %table{class: 'nav-items'}
+          %tr
+            %td= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
+            %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
+            %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
+            %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Контакти', articles_path, class: "btn btn-link btn-md"
+            - if admin_signed_in?
+              %td= link_to 'Адміністрація', admin_root_path, class: "btn btn-link btn-md"
+            - else
+      .col-lg-2{class: "first-nav col-md-2 col-sm-2"}
+        %table{class: 'nav-items'}
+          %tr
+            %td
+              = link_to image_tag('http://1.bp.blogspot.com/-RX750QedoRw/VQLP4sTdfCI/AAAAAAAAXxM/6SEueZlavz0/s1600/square-facebook-512.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
+            %td
+              .img-circle
+                = link_to image_tag('http://icons.iconarchive.com/icons/martz90/circle/512/google-plus-icon.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
+            %td
+              .img-circle
+                = link_to image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1433950711/Icon_mail_u3xa5s.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
+  .container-fluid{class: "content-area"}
+    = yield
+  .container-fluid{class: "main-footer"}
+    .col-lg-2{class: "menu-column"}
+      .page-header
+        %p Розділи
+      .container-fluid
+        %table{class: "categories-home"}
+          %tr
+            %td= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
+          %tr
+            %td= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
+          %tr
+            %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
+          %tr
+            %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
+          %tr
+            %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
+          %tr
+            %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
+          %tr
+            %td= link_to 'Вакансії', articles_path, class: "btn btn-link btn-md"
+    .col-lg-2
+      .page-header
+        %p Херсон
+      .container-fluid
+        %table{class: "services-kh"}
+          - if @services.nil?
+          - else
+            - @services.limit(7).each do |ls|
+              %tr
+                %td= link_to ls.name, ls, class: "btn btn-link btn-md"
+    .col-lg-3
+      .page-header
+        %p Контакти
+    .col-lg-4
+      .page-header
+        %p Залиште запит
+      .input-group{class: "homepage-contact"}
+        .panel-body
+          %input{class: "form-control", placeholder: "Ваш e-mail"}
+        .panel-body
+          %input{class: "form-control", placeholder: "Тема"}
+        .panel-body
+          = link_to "Надіслати", articles_path, class: "btn btn-danger"
+  .container-fluid{class: "footer-info"}
+    %p Copyright © 2015. Cлужба охраны "КОБРА"

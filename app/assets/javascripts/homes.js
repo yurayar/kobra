@@ -1,14 +1,15 @@
-$(document).ready(function() {
-    $('.home-slider').hide();
-    $(".logot").hide();
-    $(".logot").fadeIn(3000);
-    $(".home-slider").fadeIn(700);
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100){
-            $(".main-nav").css("opacity", "0.9");
-        }
-        else if ($(this).scrollTop() < 100){
-            $(".main-nav").css("opacity", "1.0");
-        }
-    });
+function hello() {
+    $('.hello').delay(2000).fadeOut(1000);
+}
+$(document).ready(function(){
+    $('.logoslogan').hide();
+    $('.helloslogan').hide();
+    if (window.location == 'http://kobrakh.herokuapp.com/') {
+        $('body').css("padding-top", "0px");
+        $(".main-footer").hide();
+        $('.hello').css("display", "block");
+        $('.logoslogan').delay(300).fadeIn(1000);
+        $('.helloslogan').delay(500).fadeIn(1000);
+        hello();
+    }
 });

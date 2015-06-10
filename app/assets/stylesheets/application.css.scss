@@ -20,23 +20,42 @@ body{
 }
 .main-nav{
   position: fixed;
-  min-height: 80px;
-  height: auto;
-  max-height: 10%;
+  height: 10vh;
   width: 100%;
   background-color: #ffffff;
   padding: 0px !important;
   overflow: visible;
   box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
+  z-index: 1;
+}
+.hello{
+  position: absolute;
+  background-color: #20c472;
+  opacity: 0.95;
+  height: 100vh;
+  display: none;
+  width: 100vw;
+  z-index: 2;
+  padding: 5% 0px 0px 0px;
+}
+.helloed{
+  position: absolute;
+  background-color: yellow;
+  height: 100vh;
+  display: none;
+  width: 100vw;
+  z-index: 2;
 }
 .homepage{
   height: auto;
-  padding: 0px;
+  padding: 80px 0px 0px 0px;
   background-color: white;
 }
 .home-slider{
-  height: 80vh;
-  background-image: url("http://www.collection.remax.ca/uploadedImages/Remaxca/Content/Collection/background.jpg");
+  height: 91vh;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -62,7 +81,7 @@ body{
   height: auto;
 }
 .nav-items{
-  height: 80px;
+  height: 10vh;
 }
 .nav-items:hover{
   padding-bottom: 0px;
@@ -89,8 +108,9 @@ body{
   text-align: center;
 }
 .logot{
-  width: 50%;
-  margin-left: 20%;
+  width: 70%;
+  padding: 0px !important;
+  margin-left: 15%;
 }
 .first-nav{
   height: 10vh;
@@ -123,4 +143,30 @@ body{
 .navbar-admin{
   height: 10vh;
   padding: 2vh;
+}
+.in_progress{
+  width: 100vw;
+  height: 100vh;
+  background-color: #0aab5c;
+  text-align: center;
+  color: white;
+  padding-top: 30%;
+}
+.hello .col-lg-4{
+  height: 60vh;
+  padding: 0px;
+}
+.logoslogan{
+  width: 100%;
+  height: 100%;
+}
+.hello .col-lg-8 h2{
+  text-align: center;
+  font-size: 4em;
+  color: #404040;
+  font-weight: 600;
+  font-family: "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;
+}
+.nav-items img{
+  border-radius: 40px !important;
 }
