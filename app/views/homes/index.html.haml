@@ -2,34 +2,73 @@
   var BASE_URL = '#{root_path}';
 .container-fluid{class: "homepage"}
   .container-fluid{class: 'home-slider'}
+    #modalLocation.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{class: "locate"}
+        .modal-content
+          .modal-header
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+            %h4#modalLocation.modal-title Как нас найти:
+          .modal-body
+            .container-fluid{class: "locationmap"}
+            %iframe{:frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgrVaN9PGXxewn3rv5XhDHsD-YUgfkc54&q=Служба+охорони+Кобра", :style => "border:0", :width => "100%"}
+          .modal-footer
     .container-fluid{class: 'slider-item1', id: 'si1', :style => %(background:url("http://res.cloudinary.com/dbyqfamwg/image/upload/v1433948892/apartments-med-what-makes-a-building-decozt-architecture-building-design-idea-with-photo-gallery-in-modern-style-strategies-council-what-makes-a-building-green-for-modern-architecture-apartment-design_vqk7dg.jpg") no-repeat center; background-size: 100% 100%)}
-      .col-lg-1
-      .col-lg-4
+      .col-lg-5
         .container-fluid{class: "servicename"}
           - if @featfirst.nil?
           - else
             = @featfirst[0].name
-      .col-lg-6
+      .col-lg-7
+        .container-fluid{class: "servicedescription"}
+        .container-fluid{class: "serviceprice"}
+          %h1 от 400 грн/мес.
+        .container-fluid{class: "serviceactions"}
+          = link_to 'Детальніше', @featfirst[0], class: "btn btn-danger btn-lg servicereadmore"
+          = link_to 'Замовити', @featfirst[0], class: "btn btn-success btn-lg serviceorder"
       .col-lg-1
+    .container-fluid{class: "sliderlocation"}
+      .col-lg-3
+      .col-lg-6
+        .container-fluid{class: "locationbuttons"}
+          %table
+            %tr
+              %td{class: "firstpos"}
+                %p Для Бизнеса
+              %td{class: "secondpos"}
+                %p Для Дома
+              %td{class: "thirdpos"}
+                %p Для Квартиры
+      .col-lg-3
     .container-fluid{class: 'slider-item1', id: 'si2', :style => %(background:url("http://res.cloudinary.com/dbyqfamwg/image/upload/v1433954128/contemporary-traditional-textured-interior-architecture-by-by-olcay-saymar-best-living-room-picture-cwss_lruol0.jpg") no-repeat center; background-size: 100% 100%)}
-      .col-lg-1
-      .col-lg-4
+      .col-lg-5
         .container-fluid{class: "servicename"}
           - if @featfirst.nil?
           - else
-            - if @featfirst[2].nil?
+            - if @featfirst[1].nil?
             - else
-              = @featfirst[2].name
-      .col-lg-6
+              = @featfirst[1].name
+      .col-lg-7
+        .container-fluid{class: "servicedescription"}
+        .container-fluid{class: "serviceprice"}
+        .container-fluid{class: "serviceactions"}
+          = link_to 'Детальніше', @featfirst[1], class: "btn btn-danger btn-lg servicereadmore"
+          = link_to 'Замовити', @featfirst[1], class: "btn btn-success btn-lg serviceorder"
       .col-lg-1
+    .container-fluid{class: "sliderlocation"}
     .container-fluid{class: 'slider-item1', id: 'si3', :style => %(background:url("http://res.cloudinary.com/dbyqfamwg/image/upload/v1434039745/finding-the-best-and-amazing-living-room-design-ideas-home-maximizing-interior-design-small-living-room-to-make-it-more-spacious_a9d9c3.jpg") no-repeat center; background-size: 100% 100%)}
-      .col-lg-1
-      .col-lg-4
+      .col-lg-5
         .container-fluid{class: "servicename"}
           - if @featfirst.nil?
           - else
             - if @featfirst[2].nil?
             - else
               = @featfirst[2].name
-      .col-lg-6
+      .col-lg-7
+        .container-fluid{class: "servicedescription"}
+        .container-fluid{class: "serviceprice"}
+        .container-fluid{class: "serviceactions"}
+          = link_to 'Детальніше', @featfirst[2], class: "btn btn-danger btn-lg servicereadmore"
+          = link_to 'Замовити', @featfirst[2], class: "btn btn-success btn-lg serviceorder"
       .col-lg-1
+    .container-fluid{class: "sliderlocation"}

@@ -1,3 +1,3 @@
 class Service < ActiveRecord::Base
-  mount_uploader :photo, ServicePhotoUploader
+  mount_uploader :picture, ServicePhotoUploader
 end

@@ -92,4 +92,19 @@
         .panel-body
           = link_to "Надіслати", articles_path, class: "btn btn-danger"
   .container-fluid{class: "footer-info"}
-    %p Copyright © 2015. Cлужба охраны "КОБРА"
+    .col-lg-5
+      %ul
+        %li
+          %span.glyphicon.glyphicon-copyright-mark{"aria-hidden" => "true"}
+        %li= '2015 Cлужба охраны "КОБРА" - 20 лет на страже Ваших интересов!'
+    .col-lg-3
+    .col-lg-4
+      %ul
+        %li
+          %span.glyphicon.glyphicon-map-marker
+        %li{class: "btn btn-link btn-locator", "aria-hidden" => "true", "data-target" => "#modalLocation", "data-toggle" => "modal", :type => "button"}
+          = "Херсон, ул.Комсомольская 5"
+      %ul
+        %li
+          %span.glyphicon.glyphicon-phone-alt{"aria-hidden" => "true"}
+        %li= "(0552) 325-335"

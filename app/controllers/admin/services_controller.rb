@@ -51,10 +51,7 @@ class Admin::ServicesController < Admin::BaseController
   # DELETE /services/1.json
   def destroy
     @service.destroy
-    respond_to do |format|
-      format.html { redirect_to admin_services_url, notice: 'Service was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+     redirect_to admin_services_path
   end
 
   private
@@ -65,6 +62,6 @@ class Admin::ServicesController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:name, :description, :picture, :price, :featured)
+      params.require(:service).permit(:name, :description,:price, :featured)
     end
 end
