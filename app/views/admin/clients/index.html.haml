@@ -16,7 +16,7 @@
         %td= client.photo
         %td= link_to 'Show', client
         %td= link_to 'Edit', edit_client_path(client)
-        %td= link_to 'Destroy', client, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', admin_client_path(client), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

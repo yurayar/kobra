@@ -1,3 +1,5 @@
+%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+%script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
 %p#notice= notice
 %h1 Listing Articles
 %table
@@ -20,8 +22,17 @@
         %td= article.comments_id
         %td= article.thumbnail
         %td= link_to 'Show', article
-        %td= link_to 'Edit', edit_article_path(article)
-        %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-%iframe{:frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed/v1/place?key=AIzaSyCgrVaN9PGXxewn3rv5XhDHsD-YUgfkc54&q=Служба+охорони+Кобра", :style => "border:0", :width => "600"}
-= link_to 'New Article', new_article_path
+.col-lg-5
+  .container-fluid{class: "serviceadvantage"}
+    .container-fluid{class: "firsttwo"}
+      .img-circle{class: "firstpic"}
+        = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435396894/Timer_clock_512_vv2g1j.png', width: "100%", height: "100%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button" )
+      .img-circle{class: "secondpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button"}
+        = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435397308/Police_Car_512_g2rmur.png', width: "90%", height: "90%")
+    .container-fluid{class: "secondtwo"}
+      .img-circle{class: "thirdpic"}
+        = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435397765/Paper_pencil_and_calculator_512_j7uizc.png', width: "80%", height: "80%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button" )
+      .img-circle{class: "fourthpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button"}
+        = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435402186/Secure_Payment_512_riyxld.png', width: "90%", height: "90%")
+.col-lg-7

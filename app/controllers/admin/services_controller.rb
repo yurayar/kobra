@@ -1,11 +1,10 @@
 class Admin::ServicesController < Admin::BaseController
+  before_action :all_services, only: [:index, :create, :update, :destroy]
   before_action :set_service, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js
 
   # GET /services
   # GET /services.json
-  def index
-    @services = Service.all
-  end
 
   # GET /services/1
   # GET /services/1.json
@@ -24,37 +23,25 @@ class Admin::ServicesController < Admin::BaseController
   # POST /services
   # POST /services.json
   def create
-    @service = Service.new(service_params)
-
-    if @service.save
-      redirect_to admin_services_path
-    else
-      render 'new'
-    end
+    @service = Service.create(service_params)
   end
 
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
-    respond_to do |format|
-      if @service.update(service_params)
-        format.html { redirect_to admin_services_path, notice: 'Service was successfully updated.' }
-        format.json { render :show, status: :ok, location: @service }
-      else
-        format.html { render :edit }
-        format.json { render json: @service.errors, status: :unprocessable_entity }
-      end
-    end
+    @service.update(service_params)
   end
 
   # DELETE /services/1
   # DELETE /services/1.json
   def destroy
     @service.destroy
-     redirect_to admin_services_path
   end
 
   private
+    def all_services
+      @services = Service.all
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_service
       @service = Service.find(params[:id])

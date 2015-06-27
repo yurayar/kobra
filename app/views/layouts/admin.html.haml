@@ -9,10 +9,12 @@
 .navbar{class: "navbar-default navbar-fixed-top navbar-admin"}
   %ul{class: "nav navbar-nav"}
     %li= link_to "Home", root_path
+    %li= link_to "Dashboard", admin_root_path
     %li= link_to "New Article", new_admin_article_path
     %li= link_to "New Service", new_admin_service_path
     %li= link_to "New Client", new_admin_client_path
     %li= link_to "New Category", new_admin_category_path
     %li= link_to "New Partner", new_partner_path
     %li= link_to "New Author", new_admin_article_path
+    %li= link_to "Log Out", destroy_admin_session_path, :method => :delete
 = yield

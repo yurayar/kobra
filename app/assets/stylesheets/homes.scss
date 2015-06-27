@@ -71,17 +71,25 @@
   height: auto;
   background-color: whitesmoke;
   border-radius: 5px;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+.servicedescription p{
+  font-size: 1em;
+  text-align: justify;
 }
 .serviceprice{
   background-color: #1fad6d;
   width: 100%;
   height: 10vh;
   margin-top: 3vh;
+  padding-bottom: 2vh;
   opacity: 0.8;
   text-align: center;
   color: white;
   border-radius: 5px;
+}
+.serviceprice h1{
+  background-color: #31b0d5;
 }
 .serviceactions{
   margin-top: 3vh;
@@ -107,20 +115,18 @@
   width: 70vw !important;
   height: 80vh !important;
 }
-.sliderlocation{
-  width: 100%;
-  height: 10%;
-  position: fixed;
-  z-index: 100;
-  bottom: 5vh;
-}
 .locationbuttons{
   height: auto;
+  max-height: 8vh;
   border-radius: 5px;
   overflow: hidden;
   padding: 0px !important;
   opacity: 0.9;
-  background-color: #0aab5c;
+  position: fixed;
+  z-index: 100;
+  width: 40vw;
+  left: 30vw;
+  bottom: 8vh;
 }
 .locationbuttons table{
   width: 100%;
@@ -133,3 +139,95 @@
   background-color: white;
   text-align: center;
 }
+.secondpos img{
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+.glyphicon.glyphicon-briefcase, .glyphicon.glyphicon-home{
+  font-size: 20px;
+}
+.servicedescription .page-header{
+  margin-top: 0px !important;
+  text-align: center;
+}
+.page-header h1{
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+}
+.forms{
+  display: none;
+}
+.wrapperhome{
+  padding: 0px !important;
+}
+.serviceadvantage{
+  width: 100%;
+  height: 60vh;
+  padding: 0px !important;
+  margin-bottom: 5vh;
+  overflow: hidden;
+}
+.advantages{
+  width: 100%;
+  height: 100%;
+}
+.advantages td{
+  height: 20vh;
+  width: 30%;
+  overflow: hidden;
+  text-align: center;
+}
+.firstpic{
+  width: 27vh;
+  height: 27vh;
+  overflow: hidden;
+  padding: 2%;
+  display: inline-block;
+  margin-top: 1.5vh;
+  margin-left: 7vh;
+  margin-right: 7vh;
+}
+.secondpic{
+  width: 16vh;
+  height: 16vh;
+  overflow: hidden;
+  margin-top: 5vh;
+  display: inline-block;
+  padding: 2%;
+}
+.thirdpic{
+  width: 23vh;
+  height: 23vh;
+  overflow: hidden;
+  padding: 4%;
+  display: inline-block;
+  margin-top: 1.5vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+}
+.fourthpic{
+  width: 20vh;
+  height: 20vh;
+  overflow: hidden;
+  margin-top: 5vh;
+  display: inline-block;
+  padding: 2%;
+}
+.firsttwo{
+  height: 30vh;
+  padding-top: 5vh;
+}
+.secondtwo{
+  height: 30vh;
+  padding: 0px;
+}
+.heh{
+  margin: 100px 50px;
+}
+.cart {
+  overflow: hidden;
+  padding: 10px 3px;
+  background: yellow;
+}
+

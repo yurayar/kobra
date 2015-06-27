@@ -1,0 +1,6 @@
+$('#servicc').html("<%= j (render @service) %>");
+$('#service_form').fadeOut(500);
+$('#newserv').fadeIn(300);
+$('#noticeservice').html("Successfully Created!", function(){
+    $('#noticeservice').delay(500).hide();
+});

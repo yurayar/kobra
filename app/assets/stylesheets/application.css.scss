@@ -16,7 +16,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 body{
-  padding-top: 80px;
+  padding-top: 10vh;
 }
 .main-nav{
   position: fixed;
@@ -24,7 +24,6 @@ body{
   width: 100%;
   background-color: #ffffff;
   padding: 0px !important;
-  overflow: visible;
   box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
   z-index: 1;
 }
@@ -40,7 +39,7 @@ body{
 }
 .homepage{
   height: 95vh;
-  padding: 80px 0px 0px 0px;
+  padding: 10vh 0px 0px 0px;
 }
 .home-slider{
   height: 85vh;
@@ -56,39 +55,38 @@ body{
   background-color: whitesmoke;
   box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
 }
-.service-client{
-  padding: 0px 30px 30px 30px;
-  min-height: 800px;
-  height: auto;
-}
-.services{
-  padding: 0px 30px 30px 30px;
-  min-height: 800px;
-  height: auto;
-}
-.clients{
-  padding: 0px 30px 30px 30px;
-  min-height: 200px;
-  height: auto;
-}
 .nav-items{
+  height: 10vh;
+  overflow: hidden;
+}
+.nav-items tr{
   height: 10vh;
 }
 .nav-items:hover{
   padding-bottom: 0px;
 }
 .nav-items td{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 4px solid white;
+  height: 100%;
+  transition: background-color 300ms;
 }
-.nav-items td:hover{
-  background-color: #f1f1f1;
-  margin-bottom: 0px;
-  border-bottom: 4px solid #0aab5c;
+.nav-items td:hover {
+  background-color: #eaeaea;
+}
+.nav-icons{
+  height: 10vh;
+}
+.nav-icons tr{
+  height: 10vh;
+}
+.nav-icons td{
+  height: 10vh;
+  transition: background-color 300ms;
+}
+.nav-icons td:hover {
+  background-color: #eaeaea;
 }
 .content-area{
-  min-height: 95vh;
+  min-height: 90vh;
   height: auto;
   padding-left:  0px;
   padding-right: 0px;
@@ -108,10 +106,11 @@ body{
 }
 .footer-info{
   height: 5vh;
-  padding-top: 1.25vh;
+  padding-top: 1vh;
   padding-left: 0px;
   padding-right: 0px;
-  line-height: 50%;
+  padding-bottom: 1vh;
+  line-height: 3vh;
   overflow: hidden;
   background-color: white;
   box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
@@ -173,6 +172,9 @@ body{
 .nav-items img{
   border-radius: 40px !important;
 }
+.nav-icons img{
+  border-radius: 40px !important;
+}
 .slider-item1{
   width: 100%;
   height: 100%;
@@ -181,4 +183,9 @@ body{
 }
 .btn-locator{
   padding: 0px !important;
+}
+.nav-items .btn-link{
+  height: 10vh;
+  line-height: 5vh;
+  padding-top: 2.5vh;
 }

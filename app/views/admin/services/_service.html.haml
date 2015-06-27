@@ -1,0 +1,11 @@
+.page-header{class: "service-header"}
+  %h3 Услуги
+%p#noticeservice
+%table{class: "table-service"}
+  %tbody
+    - @services.each do |service|
+      %tr
+        %td= link_to service.name, admin_service_path(service), class: "btn btn-link"
+        %td= service.price
+        %td= link_to 'Edit', edit_admin_service_path(service), remote: true, class: "btn btn-link"
+        %td= link_to 'Destroy', admin_service_path(service), remote: true, method: :delete, class: "btn btn-danger btn-sm"

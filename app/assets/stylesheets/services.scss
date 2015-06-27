@@ -1,3 +1,36 @@
 // Place all the styles related to the Services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.table-service{
+  width: 100%;
+  margin-bottom: 2vh;
+}
+.table-service td{
+  width: 25%;
+}
+#newserv{
+  color: white;
+}
+.services-dash{
+  box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
+  padding-bottom: 30px;
+  margin-top: 2vh;
+}
+.service-header{
+  padding-top: 0px;
+  margin-top: 0px;
+}
+#service_form{
+  box-shadow: 0px 0px 2px rgba(0,0,0, 0.5);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.form_for_service .form-control{
+  margin-bottom: 2vh;
+}
+.form_for_service .input-group{
+  margin-bottom: 2vh;
+}
+.form_for_service{
+  padding-bottom: 2vh;
+}

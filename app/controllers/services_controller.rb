@@ -5,6 +5,7 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     @services = Service.all
+    @featfirst = Service.where(featured: true).limit(3)
   end
 
   # GET /services/1

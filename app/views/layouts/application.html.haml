@@ -30,13 +30,12 @@
             %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
             %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
             %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
-            %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
             %td= link_to 'Контакти', articles_path, class: "btn btn-link btn-md"
             - if admin_signed_in?
               %td= link_to 'Адміністрація', admin_root_path, class: "btn btn-link btn-md"
             - else
       .col-lg-2{class: "first-nav col-md-2 col-sm-2"}
-        %table{class: 'nav-items'}
+        %table{class: 'nav-icons'}
           %tr
             %td
               = link_to image_tag('http://1.bp.blogspot.com/-RX750QedoRw/VQLP4sTdfCI/AAAAAAAAXxM/6SEueZlavz0/s1600/square-facebook-512.png', width: '40px', height: '40px'), root_path, class: "btn btn-link"
