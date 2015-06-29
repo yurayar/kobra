@@ -25,14 +25,14 @@
       .col-lg-8{class: "first-nav col-md-8 col-sm-8"}
         %table{class: 'nav-items'}
           %tr
-            %td= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
-            %td= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
-            %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
-            %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
+            %td= link_to 'О нас', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Услуги', services_path, class: "btn btn-link btn-md"
+            %td= link_to 'Новости', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Клиенты', clients_path, class: "btn btn-link btn-md"
             %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
-            %td= link_to 'Контакти', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Контакты', articles_path, class: "btn btn-link btn-md"
             - if admin_signed_in?
-              %td= link_to 'Адміністрація', admin_root_path, class: "btn btn-link btn-md"
+              %td= link_to 'Панель администратора', admin_root_path, class: "btn btn-link btn-md"
             - else
       .col-lg-2{class: "first-nav col-md-2 col-sm-2"}
         %table{class: 'nav-icons'}
@@ -54,19 +54,19 @@
       .container-fluid
         %table{class: "categories-home"}
           %tr
-            %td= link_to 'Про нас', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'О нас', articles_path, class: "btn btn-link btn-md"
           %tr
-            %td= link_to 'Послуги', services_path, class: "btn btn-link btn-md"
+            %td= link_to 'Услуги', services_path, class: "btn btn-link btn-md"
           %tr
-            %td= link_to 'Новини', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Новости', articles_path, class: "btn btn-link btn-md"
           %tr
-            %td= link_to 'Клієнти', clients_path, class: "btn btn-link btn-md"
+            %td= link_to 'Клиенты', clients_path, class: "btn btn-link btn-md"
           %tr
             %td= link_to 'Галерея', services_path, class: "btn btn-link btn-md"
           %tr
-            %td= link_to 'Замовити послугу', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Заказать услугу', articles_path, class: "btn btn-link btn-md"
           %tr
-            %td= link_to 'Вакансії', articles_path, class: "btn btn-link btn-md"
+            %td= link_to 'Вакансии', articles_path, class: "btn btn-link btn-md"
     .col-lg-2
       .page-header
         %p Херсон

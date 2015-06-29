@@ -20,15 +20,15 @@
         .col-lg-5
           .container-fluid{class: "serviceadvantage"}
             .container-fluid{class: "firsttwo"}
-              .img-circle{class: "firstpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403252/Timer_clock_512_copy_ccz5kq.png', width: "100%", height: "100%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" )
-              .img-circle{class: "secondpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403643/policecar_aejzdc.png', width: "90%", height: "90%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button")
+              .img-circle{class: "firstpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403252/Timer_clock_512_copy_ccz5kq.png', width: "100%", height: "100%")
+              .img-circle{class: "secondpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403643/policecar_aejzdc.png', width: "100%", height: "100%")
             .container-fluid{class: "secondtwo"}
-              .img-circle{class: "thirdpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404575/paper_pencil_and_a_calculator_dsswh3.png', width: "80%", height: "80%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" )
-              .img-circle{class: "fourthpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404741/shield_ld9ipe.png', width: "90%", height: "90%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button")
+              .img-circle{class: "thirdpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435569005/Flame_512_oytigp.png', width: "100%", height: "100%")
+              .img-circle{class: "fourthpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404741/shield_ld9ipe.png', width: "100%", height: "100%")
         .col-lg-7
           .container-fluid{class: "servicedescription"}
             - if @featfirst.nil?
@@ -39,11 +39,15 @@
                   %h1= @featfirst[0].name + " в Херсоне и области"
                 %p=@featfirst[0].description
           .container-fluid{class: "serviceprice"}
-            %h2
-              = "от " + @featfirst[0].price + " грн/мес."
+            %table{class: "servprice"}
+              %tr
+                %td{class: "notnectd" }
+                %td{class: "maintd"}
+                  = link_to "от " + @featfirst[0].price + " грн/мес.", @featfirst[0], class: "btn btn-link"
+                %td{class: "notnectd"}
           .container-fluid{class: "serviceactions"}
-            = link_to 'Детальніше', @featfirst[0], class: "btn btn-danger btn-lg servicereadmore"
-            = link_to 'Замовити', @featfirst[0], class: "btn btn-success btn-lg serviceorder"
+            = link_to 'Подробнее', @featfirst[0], class: "btn btn-danger btn-lg servicereadmore"
+            = link_to 'Заказать', @featfirst[0], class: "btn btn-success btn-lg serviceorder"
         .col-lg-1
       .container-fluid{class: "locationbuttons"}
         %table
@@ -62,15 +66,15 @@
         .col-lg-5
           .container-fluid{class: "serviceadvantage"}
             .container-fluid{class: "firsttwo"}
-              .img-circle{class: "firstpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403252/Timer_clock_512_copy_ccz5kq.png', width: "100%", height: "100%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" )
-              .img-circle{class: "secondpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403643/policecar_aejzdc.png', width: "90%", height: "90%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button")
+              .img-circle{class: "firstpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403252/Timer_clock_512_copy_ccz5kq.png', width: "100%", height: "100%")
+              .img-circle{class: "secondpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435568541/Fire_alarm_512_is7s84.png', width: "100%", height: "100%")
             .container-fluid{class: "secondtwo"}
-              .img-circle{class: "thirdpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404575/paper_pencil_and_a_calculator_dsswh3.png', width: "80%", height: "80%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button" )
-              .img-circle{class: "fourthpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404741/shield_ld9ipe.png', width: "90%", height: "90%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button")
+              .img-circle{class: "thirdpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/b_rgb:fff/v1435568551/Wireless_Connection_512_rzjvy8.png', width: "100%", height: "100%")
+              .img-circle{class: "fourthpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404575/paper_pencil_and_a_calculator_dsswh3.png', width: "100%", height: "100%")
         .col-lg-7
           .container-fluid{class: "servicedescription"}
             - if @featfirst.nil?
@@ -81,26 +85,30 @@
                   %h1= @featfirst[1].name + " в Херсоне и области"
                 %p=@featfirst[1].description
           .container-fluid{class: "serviceprice"}
-            %h2
-              = "Всего за " + @featfirst[1].price + " грн/мес."
+            %table{class: "servprice"}
+              %tr
+                %td{class: "notnectd" }
+                %td{class: "maintd"}
+                  = link_to "Всего за " + @featfirst[1].price + " грн/мес.", @featfirst[1], class: "btn btn-link"
+                %td{class: "notnectd"}
           .container-fluid{class: "serviceactions"}
-            = link_to 'Детальніше', @featfirst[1], class: "btn btn-danger btn-lg servicereadmore"
-            = link_to 'Замовити', @featfirst[1], class: "btn btn-success btn-lg serviceorder"
+            = link_to 'Подробнее', @featfirst[1], class: "btn btn-danger btn-lg servicereadmore"
+            = link_to 'Заказать', @featfirst[1], class: "btn btn-success btn-lg serviceorder"
         .col-lg-1
       .container-fluid{class: "sliderlocation"}
       .container-fluid{class: 'slider-item1', id: 'si3', :style => %(background:url("http://res.cloudinary.com/dbyqfamwg/image/upload/v1433954128/contemporary-traditional-textured-interior-architecture-by-by-olcay-saymar-best-living-room-picture-cwss_lruol0.jpg") no-repeat center; background-size: 100% 100%)}
         .col-lg-5
           .container-fluid{class: "serviceadvantage"}
             .container-fluid{class: "firsttwo"}
-              .img-circle{class: "firstpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403252/Timer_clock_512_copy_ccz5kq.png', width: "100%", height: "100%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" )
-              .img-circle{class: "secondpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403643/policecar_aejzdc.png', width: "90%", height: "90%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button")
+              .img-circle{class: "firstpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435403252/Timer_clock_512_copy_ccz5kq.png', width: "100%", height: "100%")
+              .img-circle{class: "secondpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435568548/Surveillance_video_camera_512_onzci8.png', width: "100%", height: "100%")
             .container-fluid{class: "secondtwo"}
-              .img-circle{class: "thirdpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404575/paper_pencil_and_a_calculator_dsswh3.png', width: "80%", height: "80%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button" )
-              .img-circle{class: "fourthpic"}
-                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404741/shield_ld9ipe.png', width: "90%", height: "90%", "data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button")
+              .img-circle{class: "thirdpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/b_rgb:fff/v1435568551/Wireless_Connection_512_rzjvy8.png', width: "100%", height: "100%")
+              .img-circle{class: "fourthpic", "data-placement" => "right", "data-toggle" => "tooltip", :title => "#{@featfirst[0].name}", :type => "button" }
+                = image_tag('http://res.cloudinary.com/dbyqfamwg/image/upload/v1435404575/paper_pencil_and_a_calculator_dsswh3.png', width: "100%", height: "100%")
         .col-lg-7
           .container-fluid{class: "servicedescription"}
             - if @featfirst.nil?
@@ -111,10 +119,14 @@
                   %h1=@featfirst[2].name + " в Херсоне и области"
                 %p=@featfirst[0].description
           .container-fluid{class: "serviceprice"}
-            %h2
-              = "Всего за " + @featfirst[2].price + " грн/мес."
+            %table{class: "servprice"}
+              %tr
+                %td{class: "notnectd" }
+                %td{class: "maintd"}
+                  = link_to "Всего за " + @featfirst[2].price + " грн/мес.", @featfirst[2], class: "btn btn-link"
+                %td{class: "notnectd"}
           .container-fluid{class: "serviceactions"}
-            = link_to 'Детальніше', @featfirst[2], class: "btn btn-danger btn-lg servicereadmore"
-            = link_to 'Замовити', @featfirst[2], class: "btn btn-success btn-lg serviceorder"
+            = link_to 'Подробнее', @featfirst[2], class: "btn btn-danger btn-lg servicereadmore"
+            = link_to 'Заказать', @featfirst[2], class: "btn btn-success btn-lg serviceorder"
         .col-lg-1
       .container-fluid{class: "sliderlocation"}
